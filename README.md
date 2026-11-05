@@ -7,7 +7,7 @@ La aplicación es un sistema orientado a objetos desarrollado en Python sin el u
 
 ## Integrantes del Grupo
 * Jean Pierre Leon - *Cliente y EntidadBase*
-* [Nombre Compañero 2] - *Servicio Base y Salas*
+* Dublas Coronado - *Servicio Base y Salas*
 * [Nombre Compañero 3] - *Equipos y Asesorías*
 * [Nombre Compañero 4] - *Módulo de Reservas*
 * [Nombre Compañero 5] - *Excepciones, Logs y Simulación*
