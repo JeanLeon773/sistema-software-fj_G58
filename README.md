@@ -10,10 +10,14 @@ La aplicación es un sistema orientado a objetos desarrollado en Python sin el u
 * Dublas Coronado - *Servicio Base y Salas*
 * [Nombre Compañero 3] - *Equipos y Asesorías*
 * [Nombre Compañero 4] - *Módulo de Reservas*
-* [Nombre Compañero 5] - *Excepciones, Logs y Simulación*
+* Miguel Villegas Correa - *Excepciones, Logs y Simulación*
 
 ## Estructura del Código
-* `cliente.py`: Contiene la clase abstracta `EntidadBase`, la clase `Cliente` con validaciones y la función `registrar_cliente_seguro` con manejo de excepciones (`try/except/else/finally`) y almacenamiento de registros en `app.log`.
+* `Cliente.py`: Clase `EntidadBase` y clase `Cliente` con validaciones y bloque `try/except/else/finally`.
+* `Servicio.py`: Clase abstracta `Servicio` y derivada `ServicioReservaSalas` con validaciones de parámetros.
+* `Excepciones.py`: Módulo común con la jerarquía única de excepciones del sistema (clase `SoftwareFJError`).
+* `LoggerConfig.py`: Configuración centralizada para registrar eventos en `app.log`.
+* `Simulacion.py`: Ejecuta las 10 operaciones simuladas aplicando `try/except`, `else`, `finally` y `raise ... from ...`.
 
 ## Instrucciones de Ejecución
 1. Clonar o descargar este repositorio.
