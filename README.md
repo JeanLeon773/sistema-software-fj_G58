@@ -9,11 +9,11 @@ La aplicación es un sistema orientado a objetos desarrollado en Python sin el u
 * Jean Pierre Leon - *Cliente y EntidadBase*
 * Dublas Coronado - *Servicio Base y Salas*
 * [Nombre Compañero 3] - *Equipos y Asesorías*
-* [Nombre Compañero 4] - *Módulo de Reservas*
+* Jesus Rodriguez - *Módulo de Reservas*
 * [Nombre Compañero 5] - *Excepciones, Logs y Simulación*
 
 ## Estructura del Código
-* `cliente.py`: Contiene la clase abstracta `EntidadBase`, la clase `Cliente` con validaciones y la función `registrar_cliente_seguro` con manejo de excepciones (`try/except/else/finally`) y almacenamiento de registros en `app.log`.
+   * `Reserva.py`: Clase `Reserva` (hereda de `EntidadBase`) que integra cliente, servicio, duración y estado, con confirmar, cancelar y procesar mediante manejo de excepciones y logs.
 
 ## Instrucciones de Ejecución
 1. Clonar o descargar este repositorio.
