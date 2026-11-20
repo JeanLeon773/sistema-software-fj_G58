@@ -18,6 +18,7 @@ La aplicación es un sistema orientado a objetos desarrollado en Python sin el u
 
 * `Cliente.py`: Clase `EntidadBase` y clase `Cliente` con validaciones y bloque `try/except/else/finally`.
 * `Servicio.py`: Clase abstracta `Servicio` y derivada `ServicioReservaSalas` con validaciones de parámetros.
+*  `ServiciosEspecializados.py`: Módulo de alquiler de equipos y asesorías con cálculo de costos, impuestos y descuentos.
 * `Excepciones.py`: Módulo común con la jerarquía única de excepciones del sistema (clase `SoftwareFJError`).
 * `LoggerConfig.py`: Configuración centralizada para registrar eventos en `app.log`.
 * `main.py`: Ejecuta las 10 operaciones simuladas aplicando `try/except`, `else`, `finally` y `raise ... from ...`.
