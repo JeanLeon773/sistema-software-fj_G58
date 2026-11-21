@@ -24,10 +24,15 @@ La aplicación es un sistema orientado a objetos desarrollado en Python sin el u
 * `main.py`: Ejecuta las 10 operaciones simuladas aplicando `try/except`, `else`, `finally` y `raise ... from ...`.
 * `app.log`: Archivo de registro de eventos y excepciones generadas durante la ejecución.
 
+main
 ## Instrucciones de Ejecución
 
 1. Clonar este repositorio.
 2. Asegurarse de tener instalado Python 3.x.
 3. Ejecutar el archivo principal desde la terminal:
    ```bash
+main
    python main.py
+
+   python Cliente.py 
+main
