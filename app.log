@@ -1,0 +1,20 @@
+2026-11-08 20:15:20,287 - INFO - [ÉXITO] Cliente registrado correctamente: Cliente [ID: CLI01] | Nombre: Juan Pérez | Email: juan@mail.com | Teléfono: 3001234567
+2026-11-08 20:15:20,294 - INFO - Finalizado procesamiento de cliente ID: CLI01
+2026-11-08 20:15:20,294 - ERROR - [ERROR DE VALIDACIÓN] No se pudo crear cliente CLI02: El correo 'correo_invalido' no tiene un formato válido.
+2026-11-08 20:15:20,294 - INFO - Finalizado procesamiento de cliente ID: CLI02
+2026-11-08 20:21:40,630 - INFO - === INICIO DE LA SIMULACIÓN DE 10 OPERACIONES - SOFTWARE FJ ===
+2026-11-08 20:21:40,734 - INFO - [OP-01 ÉXITO] Cliente [ID: CLI-01] | Nombre: Miguel Villegas Correa | Email: miguel.villegas@unad.edu.co | Teléfono: 3001234567
+2026-11-08 20:21:40,734 - ERROR - [OP-02 CONTROLADA] El correo 'correo_sin_arroba' no tiene un formato válido.
+2026-11-08 20:21:40,735 - INFO - [OP-02 FINALLY] Total clientes registrados: 1
+2026-11-08 20:21:40,735 - INFO - Servicio de reserva de salas creado: SAL-01
+2026-11-08 20:21:40,736 - INFO - [OP-03 ÉXITO] 3 servicios creados correctamente.
+2026-11-08 20:21:40,736 - ERROR - [OP-04 CONTROLADA - ENCADENAMIENTO] La tarifa ingresada no es un número válido. | Causa raíz: could not convert string to float: 'TEXTO_INVALIDO'
+2026-11-08 20:21:40,736 - ERROR - [OP-05 CONTROLADA] Parámetro obligatorio faltante: 'especialidad'.
+2026-11-08 20:21:40,736 - INFO - Costo calculado para el servicio SAL-01: 170000.00
+2026-11-08 20:21:40,935 - INFO - [OP-06 ÉXITO] Reserva [RES-01] | Cliente: Miguel Villegas Correa | Servicio: Sala Principal | Total: $182,070.00
+2026-11-08 20:21:40,941 - ERROR - [OP-07 CONTROLADA] La sala admite maximo 12 personas.
+2026-11-08 20:21:40,948 - ERROR - [OP-08 CONTROLADA] Intento de reserva incorrecto: Duración inválida (-4h)..
+2026-11-08 20:21:40,948 - ERROR - [OP-09 CONTROLADA] Cálculo de costos inconsistente: Descuento inválido del 150.0%..
+2026-11-08 20:21:40,950 - INFO - [OP-10A ÉXITO] Reserva RES-01 cancelada.
+2026-11-08 20:21:40,950 - ERROR - [OP-10B CONTROLADA] Operación no permitida en 'cancelar': La reserva ya fue cancelada antes..
+2026-11-08 20:21:40,953 - INFO - === FIN DE LA SIMULACIÓN - SISTEMA ESTABLE ===
