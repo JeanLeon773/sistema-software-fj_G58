@@ -1,4 +1,3 @@
-main
 
 """
 PROYECTO FASE 4 - SOFTWARE FJ
