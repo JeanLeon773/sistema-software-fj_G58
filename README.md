@@ -17,4 +17,4 @@ La aplicación es un sistema orientado a objetos desarrollado en Python sin el u
 2. Asegurarse de tener instalado Python 3.x.
 3. Ejecutar el archivo principal o módulos de prueba desde la terminal:
    ```bash
-   python cliente.py 
+   python Cliente.py 
