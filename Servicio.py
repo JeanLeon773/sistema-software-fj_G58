@@ -1,4 +1,3 @@
-
 """
 PROYECTO FASE 4 - SOFTWARE FJ
 ESTUDIANTE 2: SERVICIO BASE Y SERVICIO DE RESERVAS DE SALAS
@@ -366,7 +365,6 @@ if __name__ == "__main__":
     print("\n======================================")
     print(" FIN DE LAS PRUEBAS")
     print("======================================")
-=======
 """
 PROYECTO SOFTWARE FJ
 MODULO DE SERVICIOS Y RESERVA DE SALAS
