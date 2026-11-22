@@ -176,6 +176,8 @@ def ejecutar_simulacion():
         r1.confirmar(impuesto=19.0, descuento=10.0)
     except SoftwareFJError as e:
         logger.error(f"[OP-06 ERROR] {e}")
+    except Exception as e:
+        logger.error(f"[OP-06 EXCEPCIÓN INESPERADA] {type(e).__name__}: {e}")
     else:
         reservas.append(r1)
         logger.info(f"[OP-06 ÉXITO] {r1.obtener_detalles()}")
