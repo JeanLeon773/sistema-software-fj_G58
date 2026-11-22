@@ -143,7 +143,7 @@ def ejecutar_simulacion():
 
 # OP 3: Creación exitosa de los 3 Servicios
     try:
-        s_sala = ServicioReservaSalas("SAL-01", "Sala Principal", 50000, 12, {"proyector": 20000})
+        s_sala = ServicioReservaSalas("SAL-01", "Sala Principal", 50000, 12, 20000)
         s_equipo = ServicioAlquilerEquipos("EQU-01", "Portátil i7", 25000, stock=8)
         s_asesoria = ServicioAsesoria("ASE-01", "Asesoría Python", 90000, especialidad="Backend")
     except SoftwareFJError as e:
@@ -180,8 +180,10 @@ def ejecutar_simulacion():
         reservas.append(r1)
         logger.info(f"[OP-06 ÉXITO] {r1.obtener_detalles()}")
 
-    # OP 7: Reserva fallida (Servicio No Disponible por exceso de personas)
+# OP 7: Reserva fallida (Servicio No Disponible por exceso de personas)
     try:
+        if not servicios:
+            raise ServicioNoDisponibleError("No hay servicios disponibles para la reserva RES-02.")
         r2 = Reserva("RES-02", clientes[0], servicios[0], duracion_horas=2, numero_personas=25)
         r2.confirmar()
     except ServicioNoDisponibleError as e:
