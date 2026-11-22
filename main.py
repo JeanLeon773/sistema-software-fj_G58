@@ -172,7 +172,7 @@ def ejecutar_simulacion():
     try:
         if not servicios:
             raise ServicioNoDisponibleError("No hay servicios disponibles para realizar la reserva.")
-        r1 = Reserva("RES-01", clientes[0], servicios[0], duracion_horas=3, numero_personas=8, recursos_solicitados=["proyector"])
+        r1 = Reserva("RES-01", clientes[0], servicios[0], duracion_horas=3, numero_personas=8)
         r1.confirmar(impuesto=19.0, descuento=10.0)
     except SoftwareFJError as e:
         logger.error(f"[OP-06 ERROR] {e}")
