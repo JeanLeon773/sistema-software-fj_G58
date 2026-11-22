@@ -760,4 +760,3 @@ if __name__ == "__main__":
         logging.exception(
             "Error inesperado durante las pruebas"
         )
-main
