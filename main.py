@@ -141,7 +141,7 @@ def ejecutar_simulacion():
     finally:
         logger.info(f"[OP-02 FINALLY] Total clientes registrados: {len(clientes)}")
 
-    # OP 3: Creación exitosa de los 3 Servicios
+# OP 3: Creación exitosa de los 3 Servicios
     try:
         s_sala = ServicioReservaSalas("SAL-01", "Sala Principal", 50000, 12, {"proyector": 20000})
         s_equipo = ServicioAlquilerEquipos("EQU-01", "Portátil i7", 25000, stock=8)
@@ -150,7 +150,7 @@ def ejecutar_simulacion():
         logger.error(f"[OP-03 ERROR] {e}")
     else:
         servicios.extend([s_sala, s_equipo, s_asesoria])
-        logger.info("[OP-03 ÉXITO] 3 servicios creados correctamente.")
+        logger.info(f"[OP-03 ÉXITO] {len(servicios)} servicios creados correctamente.")
 
     # OP 4: Creación inválida con Encadenamiento (raise...from)
     try:
@@ -168,8 +168,10 @@ def ejecutar_simulacion():
     except ParametrosFaltantesError as e:
         logger.error(f"[OP-05 CONTROLADA] {e}")
 
-    # OP 6: Reserva exitosa (IVA 19% y Descuento 10%)
+# OP 6: Reserva exitosa (IVA 19% y Descuento 10%)
     try:
+        if not servicios:
+            raise ServicioNoDisponibleError("No hay servicios disponibles para realizar la reserva.")
         r1 = Reserva("RES-01", clientes[0], servicios[0], duracion_horas=3, numero_personas=8, recursos_solicitados=["proyector"])
         r1.confirmar(impuesto=19.0, descuento=10.0)
     except SoftwareFJError as e:
@@ -185,14 +187,18 @@ def ejecutar_simulacion():
     except ServicioNoDisponibleError as e:
         logger.error(f"[OP-07 CONTROLADA] {e}")
 
-    # OP 8: Reserva fallida (Duración Negativa)
+# OP 8: Reserva fallida (Duración Negativa)
     try:
+        if len(servicios) < 2:
+            raise ReservaIncorrectaError("No hay segundo servicio disponible para la prueba.")
         Reserva("RES-03", clientes[0], servicios[1], duracion_horas=-4, cantidad=2)
     except ReservaIncorrectaError as e:
         logger.error(f"[OP-08 CONTROLADA] {e}")
 
     # OP 9: Reserva fallida (Descuento Inconsistente > 100%)
     try:
+        if len(servicios) < 3:
+            raise CalculoInconsistenteError("No hay tercer servicio disponible para la prueba.")
         r4 = Reserva("RES-04", clientes[0], servicios[2], duracion_horas=2)
         r4.confirmar(impuesto=19.0, descuento=150.0)
     except CalculoInconsistenteError as e:
